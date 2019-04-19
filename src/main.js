@@ -6,6 +6,10 @@ import store from './store'
 // 统一浏览器css样式
 import 'normalize.css'
 
+// 引入THREE
+import * as THREE from 'three';
+window.THREE = THREE
+
 Vue.config.productionTip = false
 
 new Vue({

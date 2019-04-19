@@ -1,7 +1,10 @@
 <template>
   <div class="home">
+    <p>
+      aa
+      <router-link to="/test">Go to test</router-link>
+    </p>
     <div class="test-container">
-
     </div>
   </div>
 </template>
@@ -20,6 +23,5 @@ export default {
 .test-container {
   width: 500px;
   height: 500px;
-  background-color: red;
 }
 </style>
