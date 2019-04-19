@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <div class="test-container">
+
+    </div>
   </div>
 </template>
 
@@ -13,3 +16,10 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.test-container {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+}
+</style>

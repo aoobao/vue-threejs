@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// 统一浏览器css样式
+import 'normalize.css'
+
 Vue.config.productionTip = false
 
 new Vue({
