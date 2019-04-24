@@ -1,27 +1,32 @@
 <template>
   <div class="home">
-    <p>
-      aa
+    <!-- <p>
       <router-link to="/test">Go to test</router-link>
+    </p> -->
+    <p v-for="router in routers" :key="router.name">
+      <router-link :to="router.path">{{router.name}} - {{router.text}}</router-link>
     </p>
-    <div class="test-container">
-    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
-
+import routers from '../router.config'
 export default {
   name: 'home',
-  components: {
+  data () {
+    return {
+      routers: routers.map(t => {
+        return {
+          path: t.path,
+          name: t.name,
+          text: t.text
+        }
+      })
+    }
   }
 }
 </script>
 <style lang="scss" scoped>
-.test-container {
-  width: 500px;
-  height: 500px;
-}
 </style>
