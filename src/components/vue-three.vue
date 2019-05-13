@@ -2,6 +2,7 @@
   <div class="vue-three-container" ref="container">
     <camera :position="[0 ,0 ,3]" ref="camera" />
     <light :position="[0,0,5]" />
+    <slot></slot>
   </div>
 </template>
 
@@ -57,6 +58,7 @@ export default {
       this.$renderer = new THREE.WebGLRenderer({
         antialias: true // 抗锯齿设置为true
       })
+      // this.$renderer.setClearColor(0xffffff, 1.0);
       let height = this.$refs.container.offsetHeight
       let width = this.$refs.container.offsetWidth
       this.width = width
@@ -64,6 +66,7 @@ export default {
       this.$renderer.setSize(width, height)
 
       this.$refs.container.appendChild(this.$renderer.domElement)
+
 
       let children = this.$children
       for (let i = 0; i < children.length; i++) {
@@ -104,5 +107,6 @@ export default {
 .vue-three-container {
   height: 100%;
   width: 100%;
+  position: relative;
 }
 </style>
