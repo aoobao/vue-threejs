@@ -34,5 +34,7 @@ export default {
 .container {
   width: 100vw;
   height: 100vw;
+  max-width: 80vh;
+  max-height: 80vh;
 }
 </style>
