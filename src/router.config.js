@@ -16,5 +16,10 @@ export default [{
     name: 'box-render',
     text: '渲染纹理矩形',
     component: () => import( /* webpackChunkName:"box-render" */ './views/BoxRender.vue')
+  }, {
+    path: '/box-render2',
+    name: 'box=render2',
+    text: '渲染纹理矩形2',
+    component: () => import( /* webpackChunkName:"box-render2" */ './views/BoxRender2.vue')
   }
 ]
