@@ -7,19 +7,14 @@ export default [{
     component: Home
   },
   {
-    path: '/test',
-    name: 'test',
-    text: '测试',
-    component: () => import( /* webpackChunkName:"test" */ './views/Test.vue')
-  }, {
     path: '/box-render',
     name: 'box-render',
     text: '渲染纹理矩形',
-    component: () => import( /* webpackChunkName:"box-render" */ './views/BoxRender.vue')
+    component: () => import( /* webpackChunkName:"box-render2" */ './views/BoxRender.vue')
   }, {
-    path: '/box-render2',
-    name: 'box=render2',
-    text: '渲染纹理矩形2',
-    component: () => import( /* webpackChunkName:"box-render2" */ './views/BoxRender2.vue')
+    path: '/pano-render',
+    name: 'pano-render',
+    text: '全景图渲染',
+    component: () => import( /* webpackChunkName:"PanoRender" */ './views/PanoRender.vue')
   }
 ]

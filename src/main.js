@@ -6,7 +6,7 @@ import store from './store'
 // 统一浏览器css样式
 import 'normalize.css'
 // 引入全局组件
-import '@/component/global-components'
+import '@/components/global-components'
 // 引入THREE
 import * as THREE from 'three';
 window.THREE = THREE

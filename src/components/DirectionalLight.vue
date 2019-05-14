@@ -1,5 +1,5 @@
 <script>
-import register from '@/component/mixins/register'
+import register from '@/components/mixins/register'
 export default {
   mixins: [register],
   data () {
@@ -8,9 +8,6 @@ export default {
       intensity: 1,
       position: [0, 0, 5]
     }
-  },
-  created () {
-    this.init()
   },
   methods: {
     init () {
