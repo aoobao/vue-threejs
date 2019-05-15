@@ -2,8 +2,6 @@
   <div class="vue-three-container" ref="container">
     <template v-if="isRegister">
       <slot name="camera"></slot>
-      <!-- <camera :width="width" :height="height"  /> -->
-      <!-- <light /> -->
       <slot name="light"></slot>
       <slot></slot>
     </template>
@@ -21,8 +19,9 @@ export default {
   <div class="vue-three-container" ref="container">
     <template v-if="isRegister">
       <slot name="camera"></slot>
-      <camera :width="width" :height="height"  />
-      <light />
+      <!-- <camera :width="width" :height="height"  /> -->
+      <!-- <light /> -->
+      <slot name="light"></slot>
       <slot></slot>
     </template>
   </div>
@@ -33,11 +32,11 @@ export default {
       //let camera = this.$slots.camera ? this.$slots.camera : <camera width={this.width} height={this.height} />
       context.push(<slot name="camera"></slot>)
       context.push(<slot name="light" ></slot>)
+      context.push(<slot></slot>)
     }
     return (
       <div class="vue-three-container" ref="container">
         {context}
-        <slot></slot>
       </div>
     )
   },
@@ -126,6 +125,8 @@ export default {
         if (camera) {
           this.$emit('render')
           this.global.$renderer.render(this.global.$scene, camera)
+        } else {
+          console.warn('等待相机加载')
         }
         this.animateIndex = requestAnimationFrame(this.render)
       }

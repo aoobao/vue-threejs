@@ -14,7 +14,12 @@ export default [{
   }, {
     path: '/pano-render',
     name: 'pano-render',
-    text: '全景图渲染',
+    text: '全景图渲染(6张图)',
     component: () => import( /* webpackChunkName:"PanoRender" */ './views/PanoRender.vue')
+  },{
+    path:'/pano-render2',
+    name:'/pano-render2',
+    text:'全景图渲染',
+    component: () => import( /* webpackChunkName:"PanoRender" */ './views/PanoRender2.vue')
   }
 ]
