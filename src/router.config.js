@@ -21,5 +21,10 @@ export default [{
     name:'/pano-render2',
     text:'全景图渲染',
     component: () => import( /* webpackChunkName:"PanoRender" */ './views/PanoRender2.vue')
+  },{
+    path:'/shader-render',
+    name:'/shader-render',
+    text:'自定义shader渲染',
+    component: () => import( /* webpackChunkName:"ShaderRender" */ './views/ShaderRender.vue')
   }
 ]
