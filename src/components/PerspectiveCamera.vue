@@ -22,7 +22,7 @@ export default {
     },
     far: {
       type: Number,
-      default: 2000
+      default: 50000
     },
     position: {
       type: Array,
@@ -55,7 +55,7 @@ export default {
     init () {
       let camera = this.global.$camera = new THREE.PerspectiveCamera(this.fov, this.aspect, this.near, this.far)
       camera.position.set(...this.position)
-
+      camera.lookAt(this.global.$scene)
       // 绑定OrbitControls
       this.controls = new OrbitControls(camera, this.global.$renderer.domElement);
 
@@ -85,6 +85,7 @@ export default {
       camera.near = opt.near
       camera.far = opt.far
       camera.position.set(...opt.position)
+      camera.lookAt(this.global.$scene)
       camera.updateProjectionMatrix()
     }
   }

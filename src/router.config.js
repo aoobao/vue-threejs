@@ -26,5 +26,10 @@ export default [{
     name:'/shader-render',
     text:'自定义shader渲染',
     component: () => import( /* webpackChunkName:"ShaderRender" */ './views/ShaderRender.vue')
+  },{
+    path:'/point-render',
+    name:'/point-render',
+    text:'粒子渲染',
+    component: () => import( /* webpackChunkName:"PointRender" */ './views/PointRender.vue')
   }
 ]

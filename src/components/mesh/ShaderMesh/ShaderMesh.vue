@@ -1,7 +1,7 @@
 <script>
 // 自定义shader demo
 import register from '@/components/mixins/register'
-import { vertexShader, fragmentShader } from './Shader.js'
+import { vertexShader, fragmentShader } from './glsl.js'
 export default {
   mixins: [register],
   methods: {
