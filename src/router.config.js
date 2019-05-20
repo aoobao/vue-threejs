@@ -31,5 +31,10 @@ export default [{
     name:'/point-render',
     text:'粒子渲染',
     component: () => import( /* webpackChunkName:"PointRender" */ './views/PointRender.vue')
+  },{
+    path:'/pointmove-render',
+    name:'/pointmove-render',
+    text:'粒子移动demo',
+    component: () => import( /* webpackChunkName:"PointRender" */ './views/PointMove.vue')
   }
 ]

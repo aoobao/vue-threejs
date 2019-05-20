@@ -57,7 +57,7 @@ export default {
     }
   },
   mounted () {
-    this.createThree()
+    this._initThree()
     this.$emit('created')
     if (this.isAnimate) this.render()
   },
@@ -96,7 +96,7 @@ export default {
       }
 
     },
-    createThree () {
+    _initThree () {
       this.global.$renderFuncs = []
       this.global.$scene = new THREE.Scene()
       this.global.$renderer = new THREE.WebGLRenderer({
@@ -118,6 +118,9 @@ export default {
       // 暂时监听window大小变化,不监听dom大小
       window.addEventListener('resize', this.resetSize, false)
 
+    },
+    getGlobalObject (name) {
+      return this.global[name] || null
     },
     render () {
       if (this.isAnimate) {
