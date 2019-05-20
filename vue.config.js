@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: '/vue-threejs/dist/',
-
+  publicPath: '/vue-threejs/',
+  outputDir: 'docs'
 }
