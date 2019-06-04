@@ -797,7 +797,7 @@
     url-loader "^1.1.2"
     vue-loader "^15.6.4"
     webpack ">=4 < 4.29"
-    webpack-bundle-analyzer "^3.0.4"
+    webpack-bundle-analyzer "^3.3.2"
     webpack-chain "^4.11.0"
     webpack-dev-server "^3.2.0"
     webpack-merge "^4.2.1"
@@ -7029,8 +7029,8 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-webpack-bundle-analyzer@^3.0.4:
-  version "3.1.0"
+webpack-bundle-analyzer@^3.3.2:
+  version "3.3.2"
   resolved "http://registry.npm.taobao.org/webpack-bundle-analyzer/download/webpack-bundle-analyzer-3.1.0.tgz?cache=0&other_urls=http%3A%2F%2Fregistry.npm.taobao.org%2Fwebpack-bundle-analyzer%2Fdownload%2Fwebpack-bundle-analyzer-3.1.0.tgz#2f19cbb87bb6d4f3cb4e59cb67c837bd9436e89d"
   dependencies:
     acorn "^6.0.7"
