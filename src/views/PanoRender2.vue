@@ -8,7 +8,7 @@
         <light />
       </template>
       <template v-slot:default>
-        <Panorama path="./textures/panorama/room.jpg" />
+        <Panorama path="./textures/panorama/hotel.jpg" />
       </template>
     </vue-three>
   </div>
